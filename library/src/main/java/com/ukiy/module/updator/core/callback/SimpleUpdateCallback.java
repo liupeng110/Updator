@@ -17,7 +17,6 @@ public class SimpleUpdateCallback implements UpdateCallback {
     @Override
     public void onOptUpdate(final Context context, UpdateInfo versionInfo, String cur_version) {
         Notice.showInfo(context, "发现新版本" + versionInfo.new_version);
-        final String url = versionInfo.url;
         AlertDialog dialog = new AlertDialog.Builder(context).setTitle("发现新版本")
                 .setMessage("当前版本：" + cur_version + "\n" +
                         "最新版本：" + versionInfo.new_version + "\n" +
@@ -26,6 +25,7 @@ public class SimpleUpdateCallback implements UpdateCallback {
                 .setPositiveButton("下载更新", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
+                        Notice.showInfo(context,"后台开启下载");
                         Updator.downloadUpdateInfo(context, new SimpleDownloadCallback());
                     }
                 }).create();

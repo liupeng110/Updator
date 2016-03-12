@@ -1,7 +1,16 @@
 # Updator简介
 为你的安卓app加入更新模块吧！Updator只需要简单的配置就能够完成下载更新包，安装更新包的功能~
 # 导入工程
-
+在你app的build.gradle里面添加如下代码：
+```groovy
+repositories {
+    maven { url "https://jitpack.io" }
+}
+	
+dependencies {
+    compile 'com.github.ukiy2010:Updator:-SNAPSHOT'
+}
+```
 # 使用方法
 1.在使用之前初始化，比如在Application中：
 ```Java

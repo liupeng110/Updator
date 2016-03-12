@@ -4,7 +4,6 @@ import android.app.Notification;
 import android.app.Service;
 import android.content.Context;
 import android.support.v4.app.NotificationManagerCompat;
-import android.widget.RemoteViews;
 
 import com.ukiy.module.updator.R;
 import com.ukiy.module.updator.core.Notice;
@@ -30,7 +29,7 @@ public class SimpleDownloadCallback implements DownloadCallBack {
         //通知栏内显示下载进度条
 //        Intent intent = new Intent(context, test.class);//点击进度条，进入程序
 //        PendingIntent pIntent = PendingIntent.getActivity(this, 0, intent, 0);
-        RemoteViews contentView = new RemoteViews(context.getPackageName(), R.layout.notification_item);//通知栏中进度布局
+//        RemoteViews contentView = new RemoteViews(context.getPackageName(), R.layout.notification_item);//通知栏中进度布局
         NotificationManagerCompat notificationManager = NotificationManagerCompat.from(context);
         Notification notification =
                 new Notification.Builder(context)

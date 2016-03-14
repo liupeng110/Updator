@@ -6,23 +6,25 @@ import android.content.Context;
 import android.support.v4.app.NotificationManagerCompat;
 
 import com.ukiy.module.updator.R;
-import com.ukiy.module.updator.core.Notice;
 
 /**
  * Created by ukiy on 16/3/12.
  */
-public class SimpleDownloadCallback implements DownloadCallBack {
+public class SimpleDownloadCallback implements DownloadCallback {
 
     @Override
     public void onProgress(Service service, int progress) {
-        Notice.d(progress + "");
         notificationInit(service, progress);
     }
 
     @Override
     public void onDone(Service service) {
-        NotificationManagerCompat notificationManager = NotificationManagerCompat.from(service);
-        notificationManager.cancel(0);
+        notificationCancel(service);
+    }
+
+    @Override
+    public void onFail(Service service) {
+
     }
 
     private void notificationInit(Context context, int progress) {
@@ -39,5 +41,10 @@ public class SimpleDownloadCallback implements DownloadCallBack {
                         .setContentText("进度：" + progress + "%")
                         .build();
         notificationManager.notify(0, notification);
+    }
+
+    private void notificationCancel(Context context) {
+        NotificationManagerCompat notificationManager = NotificationManagerCompat.from(context);
+        notificationManager.cancel(0);
     }
 }

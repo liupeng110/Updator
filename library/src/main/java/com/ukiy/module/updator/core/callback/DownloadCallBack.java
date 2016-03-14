@@ -8,7 +8,9 @@ import java.io.Serializable;
 /**
  * Created by ukiy on 16/3/12.
  */
-public interface DownloadCallBack extends Serializable{
+public interface DownloadCallback extends Serializable{
     void onProgress(Service service,int progress);
     void onDone(Service service);
+    //占位，暂无实现
+    void onFail(Service service);
 }

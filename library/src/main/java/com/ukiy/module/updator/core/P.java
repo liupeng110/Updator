@@ -2,7 +2,7 @@ package com.ukiy.module.updator.core;
 
 import android.app.Service;
 
-import com.ukiy.module.updator.core.callback.DownloadCallBack;
+import com.ukiy.module.updator.core.callback.DownloadCallback;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
@@ -93,7 +93,7 @@ public class P {
     }
 
     //支持断点续传
-    public static boolean downoadFile(boolean brokenReusme, String u, File f, DownloadCallBack downloadCallBack, Service service) {
+    public static boolean downoadFile(boolean brokenReusme, String u, File f, DownloadCallback downloadCallback, Service service) {
         int BLOCK_SIZE = 1024;
         InputStream in = null;
         RandomAccessFile out = null;
@@ -141,7 +141,7 @@ public class P {
                 downloadedLen += readLen;
                 if ((int) (downloadedLen * 100 / totalLen) - progress > 2) {//每百分之2才进一次
                     progress = (int) (downloadedLen * 100 / totalLen);
-                    downloadCallBack.onProgress(service, (int) (downloadedLen * 100 / totalLen));
+                    downloadCallback.onProgress(service, (int) (downloadedLen * 100 / totalLen));
                 }
             }
         } catch (IOException e) {
@@ -159,7 +159,7 @@ public class P {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-            downloadCallBack.onDone(service);
+            downloadCallback.onDone(service);
         }
         if (totalLen == f.length()) {//文件长度等于总长度
             return true;

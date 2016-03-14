@@ -18,4 +18,7 @@ public interface UpdateCallback extends Serializable{
 
     //已经是最新
     void onAlreadyNewest(Context context, UpdateInfo updateInfo, String cur_version);
+
+    //占位，暂无实现
+    void onFail(Context context);
 }

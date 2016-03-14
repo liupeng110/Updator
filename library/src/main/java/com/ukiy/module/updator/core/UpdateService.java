@@ -5,8 +5,10 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Environment;
 
-import com.ukiy.module.updator.core.callback.DownloadCallBack;
+import com.ukiy.module.updator.core.callback.DownloadCallback;
 import com.ukiy.module.updator.core.callback.UpdateCallback;
+import com.ukiy.module.updator.core.utils.MainPoster;
+import com.ukiy.module.updator.core.utils.Notice;
 
 import java.io.File;
 
@@ -41,8 +43,8 @@ public class UpdateService extends IntentService {
             case DOWNLOAD_UPDATE_FILE:
                 if (updateInfo == null) break;
                 File updateFile = new File(getUpdatePath(), Updator.cur_version + updateFileName);
-                DownloadCallBack downloadCallBack = (DownloadCallBack) intent.getSerializableExtra(DOWNLOAD_CALLBACK);
-                if (!P.downoadFile(false, updateInfo.url, updateFile, downloadCallBack, this)) {
+                DownloadCallback downloadCallback = (DownloadCallback) intent.getSerializableExtra(DOWNLOAD_CALLBACK);
+                if (!P.downoadFile(false, updateInfo.url, updateFile, downloadCallback, this)) {
                     Notice.showFailure(this, "下载错误");
                     break;
                 }

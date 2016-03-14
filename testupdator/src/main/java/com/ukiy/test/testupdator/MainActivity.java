@@ -12,7 +12,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Updator.init("1.1.1.0", "http://dd.myapp.com/16891/445EDA31D2839EA4DA3334BF214BB084.apk?fsname=com.tencent.tmgp.mhxy.sqsy_1.66.0_10660.apk");
+        Updator.init("1.1.1.0", "https://raw.githubusercontent.com/ukiy2010/testJson/master/README.md");
         Button btn = new Button(MainActivity.this);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override

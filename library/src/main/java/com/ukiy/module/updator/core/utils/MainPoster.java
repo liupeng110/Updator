@@ -1,4 +1,4 @@
-package com.ukiy.module.updator.core;
+package com.ukiy.module.updator.core.utils;
 
 import android.os.Handler;
 import android.os.Looper;

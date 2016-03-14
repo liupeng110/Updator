@@ -69,10 +69,11 @@ switch(cur){
 #下一版本的计划
 
 1. 避免多次重复的请求
-
 2. 增加失败回调
 
 # 更新日志
+
+## v1.1
 
 1. 完善SimpleDownloadCallback强制下载逻辑。
 2. 为SimpleUpdateCallback的构造函数添加了选项，可控制是否弹出已经是新版本的提示。

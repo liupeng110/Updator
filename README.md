@@ -32,6 +32,12 @@ dependencies {
 2. 使用默认的回调检查更新并下载安装。
 
    ```java
+   Updator.start(mContext);//检查更新并且下载安装
+   ```
+
+   或者自定义回调，有两个回调UpdateCallback是检查更新的回调，DownloadCallback是下载更新的回调。
+
+   ```java
    Updator.getUpdateInfo(mContext, mUpdateCallback);//检查更新
    Updator.downloadUpdateInfo(mContext, mDownloadCallback);//下载更新
    ```

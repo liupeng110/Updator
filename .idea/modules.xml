@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Updator.iml" filepath="$PROJECT_DIR$/Updator.iml" />
       <module fileurl="file://$PROJECT_DIR$/library/library.iml" filepath="$PROJECT_DIR$/library/library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library/library.iml" filepath="$PROJECT_DIR$/library/library.iml" />
       <module fileurl="file://$PROJECT_DIR$/testupdator/testupdator.iml" filepath="$PROJECT_DIR$/testupdator/testupdator.iml" />
     </modules>
   </component>

@@ -7,12 +7,8 @@
 在你的app的build.gradle里面添加如下代码：
 
 ```groovy
-repositories {
-    maven { url "https://jitpack.io" }
-}
-
 dependencies {
-    compile 'com.github.ukiy2010:Updator:-SNAPSHOT'
+    compile 'com.github.ukiy2010:Updator:1.1.1'
 }
 ```
 

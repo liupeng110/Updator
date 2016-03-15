@@ -1,8 +1,5 @@
 package com.ukiy.module.updator.core;
 
-import android.os.Parcel;
-import android.os.Parcelable;
-
 import org.json.JSONObject;
 
 /**

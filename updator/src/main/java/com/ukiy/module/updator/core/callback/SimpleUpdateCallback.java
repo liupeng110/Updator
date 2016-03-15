@@ -5,9 +5,9 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.view.WindowManager;
 
-import com.ukiy.module.updator.core.utils.Notice;
 import com.ukiy.module.updator.core.UpdateInfo;
 import com.ukiy.module.updator.core.Updator;
+import com.ukiy.module.updator.core.utils.Notice;
 
 /**
  * Created by UKIY on 2016/1/8.

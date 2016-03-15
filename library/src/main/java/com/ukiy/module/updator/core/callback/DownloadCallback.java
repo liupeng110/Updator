@@ -1,7 +1,6 @@
 package com.ukiy.module.updator.core.callback;
 
 import android.app.Service;
-import android.content.Context;
 
 import java.io.Serializable;
 

@@ -8,7 +8,7 @@
 
 ```groovy
 dependencies {
-    compile 'com.github.ukiy2010:Updator:1.1.1'
+    compile 'com.ukiy.module:updator:1.1.1'
 }
 ```
 
@@ -74,6 +74,10 @@ switch(cur){
 2. 增加失败回调
 
 # 更新日志
+
+## v1.1.1
+
+1. 迁移到jcenter
 
 ## v1.1
 
